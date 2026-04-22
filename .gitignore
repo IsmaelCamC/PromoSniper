@@ -1,0 +1,7 @@
+node_modules/
+chrome_profile/
+results.json
+codes.txt
+*.log
+.DS_Store
+session.json

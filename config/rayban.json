@@ -1,0 +1,25 @@
+{
+  "name": "Ray-Ban Mexico",
+  "url": "https://www.ray-ban.com/ShoppingCartDisplayView?storeId=34153&catalogId=22574&langId=-50",
+  "selectors": {
+    "promoLink": "#wcs-apply-promo",
+    "input": "#D_CartPage_PromoCode_Input",
+    "applyBtn": "#D_CartPage_PromoCode_Apply",
+    "success": [
+      "#promosuccess",
+      "#promosuccessGWP"
+    ],
+    "error": [
+      "#promoerror",
+      "#promoerror1",
+      "#promoerror2"
+    ],
+    "removeBtn": "[data-element-id*=\"PromoCode_Remove\"], .wcs-promo-remove, #wcs-remove-promo",
+    "cartReadyIdentifier": "#D_CartPage_PromoCode_Apply"
+  },
+  "settings": {
+    "loginWaitMs": 60000,
+    "minDelayMs": 3000,
+    "maxDelayMs": 7000
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "promocodescrapper",
+  "version": "1.0.0",
+  "description": "Ray-Ban MX promo code tester",
+  "type": "module",
+  "main": "scraper.js",
+  "scripts": {
+    "start": "node scraper.js",
+    "headless": "HEADLESS=true node scraper.js",
+    "api": "node api-tester.js",
+    "install-browser": "node node_modules/playwright/install.js chromium"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.59.1",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}
