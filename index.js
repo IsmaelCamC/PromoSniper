@@ -40,8 +40,25 @@ async function main() {
     process.exit(1);
   }
 
-  // Para poder usarlo automáticamente como antes sin presionar Enter, usar arg --auto-rayban temporal
-  const selectedProfile = profiles[0]; // Carga automatica del primero para agilizar
+  let selectedProfile;
+
+  if (profiles.length === 1) {
+    // Si solo hay un perfil, seleccionarlo automáticamente sin preguntar
+    selectedProfile = profiles[0];
+  } else {
+    // Si hay más de un perfil, mostrar menú interactivo
+    console.log('Perfiles disponibles:');
+    profiles.forEach((p, idx) => console.log(` [${idx + 1}] ${p.replace('.json', '')}`));
+    
+    let profileIdx = await askQuestion('\nElige el número de perfil a usar (default: 1): ');
+    profileIdx = parseInt(profileIdx) || 1;
+    if (profileIdx < 1 || profileIdx > profiles.length) {
+      console.error('❌ Perfil inválido.');
+      process.exit(1);
+    }
+    selectedProfile = profiles[profileIdx - 1];
+  }
+
   const profilePath = path.join(CONFIG_DIR, selectedProfile);
   const config = JSON.parse(fs.readFileSync(profilePath, 'utf-8'));
 

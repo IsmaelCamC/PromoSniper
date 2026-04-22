@@ -66,6 +66,8 @@ Crea un nuevo archivo JSON dentro de la ruta `config/` copiando la estructura de
 }
 ```
 
+Puedes ayudarte del archivo "prompt-generador-perfil.md" para generar los perfiles, solo dirigite a la pagina y pega un codigo de promoción valido, luego haz click derecho y selecciona "Ver codigo fuente", copia el codigo fuente y pegalo en el archivo "prompt-generador-perfil.md" y ejecuta el prompt.
+
 ### Parámetros Relevantes
 
 - **generatorConfig:** Define las reglas de mutación de semillas en `src/generator.js`.

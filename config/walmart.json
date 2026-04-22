@@ -1,0 +1,42 @@
+{
+    "name": "Walmart México",
+    "url": "https://www.walmart.com.mx/checkout/review-order",
+    "generatorConfig": {
+        "varySuffixRange": [
+            0,
+            99
+        ],
+        "yearsToInject": [
+            "24",
+            "25",
+            "26",
+            "27"
+        ],
+        "regions": [
+            "MX",
+            "US"
+        ]
+    },
+    "selectors": {
+        "promoLink": "button[data-automation-id='promo-code-link'], .ld-Alert-content + button",
+        "input": "input#promo-code-input, input[name='promoCode']",
+        "applyBtn": "button[data-automation-id='promo-code-submit-button'], button#apply-promo-code",
+        "success": [
+            ".ld-Alert-success",
+            "[data-automation-id='promo-code-success-msg']",
+            ".promo-code-applied-message"
+        ],
+        "error": [
+            ".ld-Alert-error",
+            "[data-automation-id='promo-code-error-msg']",
+            "#promo-code-input-error"
+        ],
+        "removeBtn": "button[data-automation-id='promo-code-remove-button'], .promo-remove",
+        "cartReadyIdentifier": "div[data-testid='pciContent']"
+    },
+    "settings": {
+        "loginWaitMs": 60000,
+        "minDelayMs": 3000,
+        "maxDelayMs": 7000
+    }
+}
